@@ -2,134 +2,274 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Non profit donation campagin| Donation Page</title>
-    <link rel="stylesheet" href="exp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Non Profit Donation Campaign</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1 align="center">Non profit donation campagin| Donation Page</h1>
-        <p align="center"><i>Every drop counts, every life matters.</i></p>
+    <header class="top-header">
+        <h1>Non Profit Donation Campaign</h1>
+
+        <p>
+            Help us support poor families, children, and communities in need
+        </p>
     </header>
 
-    <hr>
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#progress">Progress</a>
+        <a href="#impact">Impact</a>
+        <a href="#donate">Donate</a>
+    </nav>
 
-    <main>
+    <main class="container">
 
-        <!-- STORY SECTION -->
-        <section>
-            <h2>The Story: Water Crisis in Rural Areas</h2>
-            <p>
-                In many remote villages, people struggle daily to find clean water. 
-                Families often walk long distances to collect unsafe water, leading 
-                to health problems and missed opportunities for children.
-            </p>
+        <section class="hero">
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5gQw9kHdmefKj5MpwZRqFh5lqCCtl5pz1g&s" 
-                 alt="Water crisis image" width="600">
+            <h2>Together We Can Bring Change</h2>
 
             <p>
-                <b>Our Mission:</b> We aim to build sustainable water sources like 
-                borewells and filtration systems. With your support, we can bring 
-                safe drinking water closer to those who need it most.
+                Our organization works for clean water, food support,
+                education, and medical aid. Every donation helps us move
+                one step closer to a better future.
             </p>
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8YOakEJ1u3kR5tROvBxZQjxpUZdkRKjbMew&s" 
-                 alt="Clean water success" width="600">
+            <button id="supportBtn">Support Now</button>
+
         </section>
 
-        <br>
-        <hr>
+        <section id="about" class="box">
 
-        <!-- PROGRESS SECTION -->
-        <section>
-            <h2>Fundraising Progress</h2>
-            <p>Our target is <b>$40,000</b> to support clean water projects.</p>
+            <h2>About Our Campaign</h2>
 
-            <label>Amount Collected: $26,000</label><br>
-            <meter value="26000" min="0" max="40000" style="width:100%; height:25px;">
-                65%
+            <p>
+                Non Profit Donation Campaign is a social initiative
+                that helps people who are struggling with daily needs.
+            </p>
+
+            <p>
+                We believe that small support from many people
+                can create a big impact.
+            </p>
+
+        </section>
+
+        <section id="mission" class="box">
+
+            <h2>Our Mission</h2>
+
+            <ul>
+                <li>Provide safe drinking water to villages.</li>
+                <li>Support poor children with education.</li>
+                <li>Give food and medicine to needy families.</li>
+                <li>Help homeless people.</li>
+            </ul>
+
+        </section>
+
+        <section id="progress" class="box">
+
+            <h2>Campaign Progress</h2>
+
+            <p><b>Goal: $50,000</b></p>
+
+            <label for="fundraising">
+                Current Funds Raised: $32,500
+            </label>
+
+            <meter
+                id="fundraising"
+                value="32500"
+                min="0"
+                max="50000">
             </meter>
 
-            <p><b>65% completed</b> — Help us reach our goal!</p>
+            <p id="progressText">
+                65% of the goal completed
+            </p>
+
         </section>
 
-        <hr>
+        <section class="box">
 
-        <!-- DONATION FORM -->
-        <section>
-            <h2>Support the Cause</h2>
-            <form>
+            <h2>Why Your Donation Matters</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Food Support</h3>
+
+                    <p>
+                        Helps families get daily meals and nutrition.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Education Help</h3>
+
+                    <p>
+                        Supports books, fees, and school supplies.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Medical Aid</h3>
+
+                    <p>
+                        Provides treatment and emergency care.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="impact" class="box">
+
+            <h2>Our Impact</h2>
+
+            <p>
+                With the help of donors, we have already supported
+                many families with food kits and medical support.
+            </p>
+
+            <p>
+                Your donation can help us continue this mission.
+            </p>
+
+        </section>
+
+        <section id="donate" class="box">
+
+            <h2>Donate Now</h2>
+
+            <form id="donationForm">
 
                 <fieldset>
-                    <legend><b>Select Donation Amount</b></legend>
 
-                    <input type="radio" name="amount" value="20"> $20<br>
-                    <input type="radio" name="amount" value="50"> $50<br>
-                    <input type="radio" name="amount" value="100"> $100<br>
+                    <legend>Choose Amount</legend>
 
-                    <label>Custom Amount: $</label>
-                    <input type="number" min="1">
+                    <label>
+                        <input type="radio" name="amount" value="25" required>
+                        $25 - Food support
+                    </label>
+
+                    <label>
+                        <input type="radio" name="amount" value="50">
+                        $50 - Education help
+                    </label>
+
+                    <label>
+                        <input type="radio" name="amount" value="100">
+                        $100 - Medical aid
+                    </label>
+
+                    <label>
+                        <input type="radio" name="amount" value="custom">
+                        Custom Amount
+                    </label>
+
+                    <input
+                        type="number"
+                        id="customAmount"
+                        placeholder="Enter custom amount">
+
                 </fieldset>
-
-                <br>
 
                 <fieldset>
-                    <legend><b>Your Details</b></legend>
 
-                    <label>Name:</label><br>
-                    <input type="text" required><br><br>
+                    <legend>Personal Details</legend>
 
-                    <label>Email:</label><br>
-                    <input type="email" required><br><br>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Full Name"
+                        required>
 
-                    <label>Message:</label><br>
-                    <textarea rows="3"></textarea>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email Address"
+                        required>
+
+                    <textarea
+                        id="message"
+                        rows="4"
+                        placeholder="Write a message">
+                    </textarea>
+
                 </fieldset>
-
-                <br>
 
                 <fieldset>
-                    <legend><b>Payment Info</b></legend>
 
-                    <label>Card Number:</label><br>
-                    <input type="text" placeholder="XXXX XXXX XXXX XXXX"><br><br>
+                    <legend>Payment Details</legend>
 
-                    <label>Expiry:</label>
-                    <input type="text" size="5">
+                    <input
+                        type="text"
+                        id="card"
+                        placeholder="Card Number">
 
-                    <label>CVV:</label>
-                    <input type="text" size="3">
+                    <input
+                        type="text"
+                        id="expiry"
+                        placeholder="MM/YY">
+
+                    <input
+                        type="text"
+                        id="cvv"
+                        placeholder="CVV">
+
+                    <p class="note">
+                        This is a demo donation form only.
+                    </p>
+
                 </fieldset>
 
-                <br>
-                <button type="submit">Donate Now</button>
+                <button type="submit">
+                    Confirm Donation
+                </button>
 
             </form>
+
         </section>
 
     </main>
 
-    <hr>
-
-    <footer>
-        <p align="center">© 2026 Water Care Campaign</p>
-        <p align="center">
-            <a href="#">About</a> |
-            <a href="#">Contact</a> |
-            <a href="#">Privacy</a>
+    <footer class="footer">
+        <p>
+            © 2026 Non Profit Donation Campaign.
+            All rights reserved.
         </p>
     </footer>
 
-    <div class="popup-overlay" id="donationPopup">
-        <div class="popup-card">
-            <button class="popup-close" id="donationPopupClose">×</button>
+    <!-- Popup -->
+
+    <div id="popup" class="popup">
+
+        <div class="popup-box">
+
+            <span id="closePopup">&times;</span>
+
             <h2>Donation Successful</h2>
-            <p id="donationPopupMessage">Thank you for your support!</p>
-            <button class="popup-button" id="donationPopupButton">Continue</button>
+
+            <p id="popupMessage">
+                Thank you for donating!
+            </p>
+
+            <button id="continueBtn">
+                Continue
+            </button>
+
         </div>
+
     </div>
 
-    <script src="exp.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
