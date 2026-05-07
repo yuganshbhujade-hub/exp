@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Non profit donation campagin| Donation Page</title>
+    <link rel="stylesheet" href="exp.css">
+</head>
+<body>
+
+    <header>
+        <h1 align="center">Non profit donation campagin| Donation Page</h1>
+        <p align="center"><i>Every drop counts, every life matters.</i></p>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- STORY SECTION -->
+        <section>
+            <h2>The Story: Water Crisis in Rural Areas</h2>
+            <p>
+                In many remote villages, people struggle daily to find clean water. 
+                Families often walk long distances to collect unsafe water, leading 
+                to health problems and missed opportunities for children.
+            </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5gQw9kHdmefKj5MpwZRqFh5lqCCtl5pz1g&s" 
+                 alt="Water crisis image" width="600">
+
+            <p>
+                <b>Our Mission:</b> We aim to build sustainable water sources like 
+                borewells and filtration systems. With your support, we can bring 
+                safe drinking water closer to those who need it most.
+            </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8YOakEJ1u3kR5tROvBxZQjxpUZdkRKjbMew&s" 
+                 alt="Clean water success" width="600">
+        </section>
+
+        <br>
+        <hr>
+
+        <!-- PROGRESS SECTION -->
+        <section>
+            <h2>Fundraising Progress</h2>
+            <p>Our target is <b>$40,000</b> to support clean water projects.</p>
+
+            <label>Amount Collected: $26,000</label><br>
+            <meter value="26000" min="0" max="40000" style="width:100%; height:25px;">
+                65%
+            </meter>
+
+            <p><b>65% completed</b> — Help us reach our goal!</p>
+        </section>
+
+        <hr>
+
+        <!-- DONATION FORM -->
+        <section>
+            <h2>Support the Cause</h2>
+            <form>
+
+                <fieldset>
+                    <legend><b>Select Donation Amount</b></legend>
+
+                    <input type="radio" name="amount" value="20"> $20<br>
+                    <input type="radio" name="amount" value="50"> $50<br>
+                    <input type="radio" name="amount" value="100"> $100<br>
+
+                    <label>Custom Amount: $</label>
+                    <input type="number" min="1">
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><b>Your Details</b></legend>
+
+                    <label>Name:</label><br>
+                    <input type="text" required><br><br>
+
+                    <label>Email:</label><br>
+                    <input type="email" required><br><br>
+
+                    <label>Message:</label><br>
+                    <textarea rows="3"></textarea>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><b>Payment Info</b></legend>
+
+                    <label>Card Number:</label><br>
+                    <input type="text" placeholder="XXXX XXXX XXXX XXXX"><br><br>
+
+                    <label>Expiry:</label>
+                    <input type="text" size="5">
+
+                    <label>CVV:</label>
+                    <input type="text" size="3">
+                </fieldset>
+
+                <br>
+                <button type="submit">Donate Now</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p align="center">© 2026 Water Care Campaign</p>
+        <p align="center">
+            <a href="#">About</a> |
+            <a href="#">Contact</a> |
+            <a href="#">Privacy</a>
+        </p>
+    </footer>
+
+    <script src="exp.js"></script>
+</body>
+</html>
