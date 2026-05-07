@@ -52,11 +52,25 @@ function submitDonationForm(event) {
     if (validateDonationForm()) {
         const amount = getDonationAmount();
         if (amount) {
-            alert('Donate Done!\n\nThank you for your donation of $' + amount + '!\nYour support means a lot to us.');
             document.querySelector('form').reset();
+            showDonationPopup(amount);
             console.log('Donation of $' + amount + ' completed successfully!');
         }
     }
+}
+
+// Function to show donation popup
+function showDonationPopup(amount) {
+    const popup = document.getElementById('donationPopup');
+    const message = document.getElementById('donationPopupMessage');
+    message.textContent = 'Thank you for donating $' + amount + '! Your support brings clean water closer to those in need.';
+    popup.classList.add('open');
+}
+
+// Function to hide donation popup
+function hideDonationPopup() {
+    const popup = document.getElementById('donationPopup');
+    popup.classList.remove('open');
 }
 
 // Function to update progress bar
@@ -78,5 +92,16 @@ function resetForm() {
 // Initialize form when page loads
 window.addEventListener('load', function() {
     const form = document.querySelector('form');
+    const popupClose = document.getElementById('donationPopupClose');
+    const popupButton = document.getElementById('donationPopupButton');
+    const popup = document.getElementById('donationPopup');
+
     form.addEventListener('submit', submitDonationForm);
+    popupClose.addEventListener('click', hideDonationPopup);
+    popupButton.addEventListener('click', hideDonationPopup);
+    popup.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            hideDonationPopup();
+        }
+    });
 });
